@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import { type NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { Role } from "@/types";
 
 export const authConfig: NextAuthOptions = {
   providers: [
@@ -44,7 +45,7 @@ export const authConfig: NextAuthOptions = {
     },
     async session({ session, token }) {
       if (token) {
-        session.user.role = token.role as string;
+        session.user.role = token.role as Role;
         session.user.id = token.id as string;
       }
       return session;
