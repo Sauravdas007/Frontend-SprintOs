@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +17,14 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default function SprintPage({ params }: { params: { id: string; sprintId: string } }) {
+interface PageProps {
+  params: Promise<{ id: string; sprintId: string }>;
+}
+export default function SprintPage({ params }: PageProps) {
+  const resolvedParams = use(params);
+  const id = resolvedParams.id;
+  const sprintId = resolvedParams.sprintId;
+  
   const progress = 67;
   const velocity = 58;
   const planned = 45;
