@@ -1,5 +1,6 @@
 "use client";
 
+import { signIn } from "next-auth/react"; // remove this after backend deployment
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -28,13 +29,16 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // change(de-comment) this after u deployed your backend properly
+  /*
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email || !password) {
       toast.error("Please fill in all fields");
       return;
-    }
+    } 
+  
 
     setLoading(true);
     try {
@@ -72,7 +76,38 @@ export default function LoginPage() {
       setLoading(false);
     }
   };
+  */
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
+  if (!email || !password) {
+    toast.error("Please fill in all fields");
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    const result = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
+
+    if (result?.error) {
+      toast.error("Invalid credentials");
+      return;
+    }
+
+    toast.success("Welcome back!");
+    router.push("/dashboard");
+  } catch (error) {
+    toast.error("Something went wrong");
+  } finally {
+    setLoading(false);
+  }
+};
+  
   return (
     <div className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
       {/* Background gradient */}
