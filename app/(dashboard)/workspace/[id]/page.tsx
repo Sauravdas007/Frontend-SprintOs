@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, use } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,7 +35,12 @@ const members = [
   { id: "5", name: "Eve", role: "DEVELOPER", avatar: "" },
 ];
 
-export default function WorkspacePage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+export default function WorkspacePage({ params }: PageProps) {
+  const resolvedParams = use(params);
+  const id = resolvedParams.id;
   const [loading, setLoading] = useState(false);
 
   return (
