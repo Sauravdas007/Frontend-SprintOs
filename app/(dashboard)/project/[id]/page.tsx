@@ -24,7 +24,7 @@ const sprints = [
   { id: "3", name: "Sprint 25", goal: "Mobile app v1 release", status: "planning", startDate: "2024-12-03", endDate: "2024-12-16", completed: 0, total: 10 },
 ];
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+export default function ProjectPage() {
   const [view, setView] = useState<"kanban" | "sprints">("kanban");
 
   return (
