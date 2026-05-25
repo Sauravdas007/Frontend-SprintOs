@@ -1,6 +1,6 @@
 "use client";
 
-import { signIn } from "next-auth/react"; // remove this after backend deployment
+// import { signIn } from "next-auth/react"; // remove this after backend deployment
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -30,7 +30,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
 
   // change(de-comment) this after u deployed your backend properly
-  /*
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -76,7 +76,7 @@ export default function LoginPage() {
       setLoading(false);
     }
   };
-  */
+/*
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
@@ -107,7 +107,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     setLoading(false);
   }
 };
-  
+  */
   return (
     <div className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
       {/* Background gradient */}
