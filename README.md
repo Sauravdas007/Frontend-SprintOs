@@ -56,6 +56,8 @@ Experience the platform live right now:
 * **Styling:** Tailwind CSS + shadcn/ui
 * **Animations:** Framer Motion & dnd-kit
 
+👉 **[Backend repo](https://github.com/Sauravdas007/Backend-SprintOS)**
+
 ### ⚙️ Backend & Database
 * **Database Client:** Prisma ORM
 * **Deployment Automation:** Docker & Docker Compose
