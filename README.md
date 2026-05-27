@@ -2,7 +2,7 @@
 
 AI SprintOS is a production-grade, AI-powered project and sprint management platform. It uses a modern frontend framework paired with a secure, highly scalable backend API.
 
-[![Live Demo](https://shields.io)](https://vercel.app)
+
 
 ---
 
@@ -23,12 +23,17 @@ Experience the platform live right now:
 
 ### 📊 Main Workspace
 
+<img width="1919" height="1199" alt="Screenshot 2026-05-23 192406" src="https://github.com/user-attachments/assets/23412e2f-e4bf-4774-bf18-0546bd4e8027" />
+<img width="1919" height="1199" alt="Screenshot 2026-05-23 192446" src="https://github.com/user-attachments/assets/2ab6076d-217e-4342-b3bb-d4dc0b533cec" />
 
 
 
 ### 📋 Kanban Board & AI Core
 
 
+
+<img width="1919" height="1199" alt="Screenshot 2026-05-23 192218" src="https://github.com/user-attachments/assets/1fd057c7-6b33-451e-a047-0e499228ec08" />
+<img width="1918" height="1199" alt="Screenshot 2026-05-23 192258" src="https://github.com/user-attachments/assets/84b51e54-0de8-4bb1-b0dd-17e7c8c057ca" />
 
 
 ---
