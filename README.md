@@ -9,7 +9,7 @@ AI SprintOS is a production-grade, AI-powered project and sprint management plat
 ## 🚀 Live Links & Demo
 
 Experience the platform live right now:
-👉 **[Launch AI SprintOS App](https://vercel.app)**
+👉 **[Launch AI SprintOS App](https://frontend-sprint-os-m3rx.vercel.app/)**
 
 ### 🔑 Demo Accounts
 * **Email:** `admin@aisprintos.dev`
